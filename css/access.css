@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+.title {
+  height: 310px;
+  background-image: url(../images/access/bg-main.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.title h1 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.title p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  background-color: #c48b49;  /* お好みで色変更OK */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.access-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2em;
+  width: 1000px;
+  max-width: 90%;
+  margin: 75px auto 0;
+  margin-top: 0;
+}
+
+.access-list {
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+}
+
+.center-access {
+  grid-column: 1 / -1;   
+  justify-self: center;    
+  width: 500px;            
+}
+
+.access-list h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+.access-list ul {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1em;
+  padding: 0;
+  list-style: none;
+}
+
+.access-list li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.access-list h3 {
+  margin: 0;
+  font-size: 1em;
+}
+
+.access-list p {
+  margin-top: 75px;
+  margin: 0.3em 0 0;
+}
+
+.map-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  width: 1000px;
+  max-width: 90%;
+  margin: 75px auto 0;
+  margin-top: 0;
+}
+
+.map-list iframe {
+  margin-bottom: 10px; 
+  display: inline-block;
+  margin: 0 auto;
+  
+}
+
+.map-list div {
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.map-list p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .section-title {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  .access-container {
+    grid-template-columns: 1fr; 
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+
+  .center-access {
+    width: 100%; 
+    max-width: 100%;
+    justify-self: center;
+  }
+
+  .access-list ul {
+    grid-template-columns: 1fr; 
+  }
+
+  .map-list {
+    grid-template-columns: 1fr; 
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+
+  .map-list iframe {
+    width: 90%;
+    aspect-ratio: 1 / 1; 
+    display: block;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .title h1 {
+    font-size: 1.8em;
+  }
+
+  .title p {
+    font-size: 13px;
+  }
+}
